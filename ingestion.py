@@ -22,7 +22,7 @@ def ingest_docs():
     #Generating a credible Url
     for doc in documents:
         new_url = doc.metadata["source"]
-        new_url = new_url.replace("langchain-docs", "https://")
+        new_url = new_url.replace("langchain-docs", r"https:\\")
         doc.metadata.update({"source": new_url})
 
     #Embeed and Load
